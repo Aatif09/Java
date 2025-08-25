@@ -1,0 +1,308 @@
+/*
+import java.io.FileOutputStream;
+public class Main
+{
+	public static void main(String args[]){
+	        // Using try-with-resources
+	    try(FileOutputStream fileOutputStream =new FileOutputStream("D:\\abc.txt")){
+		String msg = "You all are great Students";
+		byte byteArray[] = msg.getBytes(); //converting string into byte array
+		fileOutputStream.write(byteArray);
+		System.out.println("You are doing good its done writing the file !");
+	}
+	catch(Exception exception){
+	       System.out.println(exception);
+	}
+	}
+}
+*/
+
+//The diamond operator (<>) was introduced in Java 7 to simplify generic class instantiation
+//by letting the compiler infer the type automatically
+//List<String> list = new ArrayList<>(); // ✔ No need to repeat <String>
+//List<String> list = new ArrayList<String>(); // Repetitive   before java 7
+/*
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Map<String, List<Integer>> map = new HashMap<>();
+        map.put("scores", List.of(90, 85, 100));
+        System.out.println(map);
+    }
+}
+*/
+
+//Java code for local variable  use
+//declaration using LVTI  Local Variable Type Inference in JAVA 10
+/*
+import java.util.ArrayList;
+class Main {
+
+	public static void main(String ap[])
+	{
+	    var abc = "test";
+	    var y = 10;
+		var x = new ArrayList<>();
+		x.add("Abhsihek");
+		System.out.print(x.get(0) + "y ="+y);
+	}
+}
+*/
+
+/*
+import java.util.*;
+public class Main
+	{
+			public static void main(String args[])
+			{
+				System.out.println("Enter any String");
+				Scanner sc = new Scanner(System.in);
+				String sample =  sc.nextLine();
+		        System.out.println("Sample String:\n"+ sample);
+
+		        String encoded  = Base64.getEncoder().encodeToString(sample.getBytes());
+
+		        System.out.println("Encoded String:\n"+ encoded);
+
+		 		byte[] actualByte = Base64.getDecoder().decode(encoded);
+
+		        String actualString = new String(actualByte);
+
+		        System.out.println("actual String:\n" + actualString);
+			}
+	}
+*/
+/*
+public class Main
+{
+	public static void main(String args[]){
+	    String day ="Abhishek";
+
+        String result = switch (day) {
+            case "FRIDAY", "SATURDAY", "SUNDAY" -> "Weekend Vibes!";
+            case "MONDAY", "TUESDAY" -> "Just started!";
+            case "WEDNESDAY" -> "Midweek!";
+            default -> "Work hard!";
+        };
+
+        System.out.println("ok fine "+result);
+
+    }
+}
+*/
+
+/* use of yield Java 13 as part of enhanced switch expressions
+Used to return a value from a switch expression block
+It replaces return inside switch expressions
+ */
+/*
+public class Main
+{
+	static final int ONE = 1;
+	private static final int TWO = 2;
+
+	public static void main(String a[])
+	{
+			int number=2;
+			String message = switch (number) {
+				case ONE -> "Got a 1";
+				case 2 -> {
+				    	System.out.println("in case 2");
+				        yield "test";
+				}
+				default -> {
+				    yield "More than 2";
+				}
+			};
+			System.out.println("Yield ans is : "+message);
+	}
+}
+*/
+
+/*Text blocks java 15 feature that lets you write multi-line strings in a clean, readable way.
+ Write multi-line strings without escaping quotes or newline characters
+Improves readability and maintainability for:
+HTML
+JSON
+SQL
+Multi-line messages*/
+/*
+public class Main
+{
+
+	public static void main(String a[])
+	{
+			String message1 = "A-143, 9th Floor, Sovereign Corporate Tower,\n" +
+				"Sector-136, Noida,\n" +
+				"Uttar Pradesh - 201305";
+
+			//BETTER : Using text blocks
+			//gets rid of lots of the clutter
+			String message2 = """
+				A-143, 9th Floor, Sovereign Corporate Tower,
+				Sector-136, Noida,
+				Uttar Pradesh - 201305""";
+			  System.out.println("Testing Msg 1 : "+message1);
+			  System.out.println("Testing Msg 2 : "+message2);
+
+	}
+}
+*/
+
+/*
+ * Record java 16
+*/
+/*
+record EmpRecord(int id, String name, int sal, String add){}
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		EmpRecord empRecord1 = new EmpRecord(10, "Ankit", 10000, null);
+		EmpRecord empRecord2 = new EmpRecord(10, "Ankit", 10000, null);
+
+
+
+		// toString()
+		System.out.println(empRecord1);
+
+		// accessing fields
+		System.out.println("Name: "+empRecord2.name());
+		System.out.println("ID: "+empRecord1.id());
+
+		// equals()
+		System.out.println(empRecord1.equals(empRecord2));
+
+		// hashCode()
+		System.out.println(empRecord1 == empRecord2);
+	}
+}
+*/
+
+
+/*
+ * a Sealed class Java 17  is a technique that limits the number of classes
+ * that can inherit the given class.
+ */
+/*
+import java.lang.*;
+
+sealed class Human permits Manish, Vartika, Anjali
+{
+	public void printName()
+	{
+		System.out.println("Default");
+	}
+}
+
+non-sealed class Manish extends Human
+{
+	public void printName()
+	{
+		System.out.println("M");
+	}
+}
+
+non-sealed class Vartika extends Human
+{
+	public void printName()
+	{
+		System.out.println("V");
+	}
+}
+
+final class Anjali extends Human
+{
+	public void printName()
+	{
+		System.out.println("A");
+	}
+}
+
+public class Main
+{
+	public static void main(String[] args)
+	{
+		Human h1 = new Anjali();
+		Human h2 = new Vartika();
+		Manish h3 = new Manish();
+
+		h1.printName();
+		h2.printName();
+		h3.printName();
+	}
+}
+*/
+
+
+// It is a way to divide your code into modules so that
+//You can control what is exposed to other modules.
+//You can hide internal APIs.
+//The application becomes more secure, maintainable, and scalable.
+/*
+ // module-info.java
+module com.example.myapp {
+    requires java.sql;
+    exports com.example.myapp.api;
+}
+*/
+// annotation
+/*
+interface Vehicle {
+    void start();
+}
+
+public class Main implements Vehicle {
+    @Override
+    public void start() {
+        System.out.println("Car starts");
+    }
+
+     public void starts() {
+        System.out.println("abc");
+    }
+
+    public static void main(String a[])
+    {
+        System.out.println("in Main");
+    }
+}
+*/
+
+/*
+Use @Repeatable(ContainerAnnotation.class) on the annotation you want to repeat.
+
+The container annotation just holds an array of the original annotation.
+
+Repeating annotations work only with @Retention(RetentionPolicy.RUNTIME) if you want to access them at runtime.
+*/
+
+import java.lang.annotation.Repeatable;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+
+@Repeatable(Games.class)
+
+@interface Game{
+ String name();
+ String day();
+}
+//Declaring container for repeatable annotation type
+@Retention(RetentionPolicy.RUNTIME)
+@interface Games{
+ Game[] value();
+}
+//Repeating annotation
+@Game(name = "Cricket",  day = "Sunday")
+@Game(name = "Hockey",   day = "Friday")
+@Game(name = "Football", day = "Saturday")
+
+public class Main {
+ public static void main(String[] args) {
+     // Getting annotation by type into an array
+     Game[] game = Main.class.getAnnotationsByType(Game.class);
+     for (Game game2 : game) {    // Iterating values
+         System.out.println(game2.name()+" on "+game2.day());
+}

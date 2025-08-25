@@ -1,0 +1,24 @@
+Interface
+• In Java an Interface is a User-Defined data type.
+• Using interface keyword, we can declare an Interface.
+
+Syntax: -interface I1{ }
+
+Here, interface is a keyword and I1 is an interface name.
+
+• Like in classes, we get a .class file for an interface after its successful compilation.
+• In an interface we generally declare two different types of members which are Variable and Method.
+• When we declare a variable in an interface then it will always be public static final.
+• When we declare a method inside an interface then by default it will be public abstract.
+
+interface I1{
+	// void m1(){} :- error : interface abstract method cannot have body.
+	void m2();
+}
+==>polymorphic reference.
+In Java, polymorphism allows you to use a parent type (interface or superclass) to refer to a child object.
+This is called a polymorphic reference.
+A polymorphic reference is when a parent-type variable refers to a child-type object.
+This works with:
+Classes (superclass → subclass)
+Interfaces (interface → implementing class)

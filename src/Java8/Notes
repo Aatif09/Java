@@ -1,0 +1,19 @@
+
+(parameters) -> { body }
+🔹 Examples
+
+Runnable r = () -> System.out.println("Hello!");
+With parameters:
+
+(int a, int b) -> System.out.println(a + b);
+
+Single statement body (no braces needed):
+str -> str.length()
+
+What is a Functional Interface?
+A Functional Interface is an interface that contains exactly one abstract method.
+It can have multiple default or static methods, but only one abstract method.
+
+It is used as the target type for lambda expressions, method references, or constructor references.
+A lambda expression in Java can only be used:
+where the target type is a functional interface — an interface with exactly one abstract method.
