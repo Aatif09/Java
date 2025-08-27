@@ -18,3 +18,4 @@ public class Super1 {
         c.cook();
     }
 }
+

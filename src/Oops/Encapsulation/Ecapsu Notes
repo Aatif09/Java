@@ -1,0 +1,28 @@
+Introduction
+Encapsulation is the mechanism of binding data (variables) and actions (methods) into a single unit, called a class.
+Technically, every class is an example of encapsulation.
+Real World Example:
+Capsule :A capsule in which main medicine is encapsulated.
+Car:A car is in which engine, wheels, and other parts are encapsulated.
+
+
+Rules for Encapsulation :-
+1. Private Variables :
+Declare variables as private so that they cannot be accessed directly from outside the class.
+2. Public Getter & Setter Methdos :
+Provide public getter and setter methods to access and modify the private variables.
+
+
+Use of Encapsulation :-
+Protects data: Hides data from direct access using private variables.
+Controls data access: Provides controlled access through public getters and setters.
+Allows data validation: Enables validation before updating variables (e.g., checking valid input).
+Improves code maintainability: Keeps internal implementation hidden, making changes easier.
+Enhances flexibility: Internal logic can change without affecting external code.
+Prevents unauthorized or accidental modifications: Limits who and how data can be changed.
+
+ Interview Questions :-
+What is encapsulation & its use ?
+What is Data – Hiding ?
+Provide examples of encapsulation in Java.
+Difference between Abstraction & Encapsulation ?

@@ -11,9 +11,10 @@ Types of Polymorphism: -
 Compile Time Polymorphism: -
 In Java we can achieve Compile Time or Static Polymorphism using the feature of Method Overloading.
 
-Method Overloading: -
+Method Overloading /Static Binding /Early Binding: -
 Method Overloading is a feature that can be used to assign a singular name to more than one method.
 
+Only + operator have overloading feature in java
 Prerequisites for application of Method Overloading feature:
 a. Method name must be same for all methods.
 b. Method parameter must be different in all the methods.
