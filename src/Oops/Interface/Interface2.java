@@ -11,9 +11,10 @@ class BB extends AA{
     public void m2(){
         System.out.println("m2 in A class");
     }}
-class Interface2{
-    public static void main(String arg[]){
+class Interface2 {
+    public static void main(String arg[]) {
         I11 i1 = new BB();
-        int a = i1.m1();
+//        int a = i1.m1();
         i1.m2();
-        System.out.println("a :- "+a);}}
+        System.out.println("a : " + i1.m1());
+    }}

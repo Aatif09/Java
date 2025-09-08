@@ -11,7 +11,7 @@ interface In3 extends In1,In2{
 class A2 implements In3{
     void m1(){
         System.out.println("m1 in A class");
-        System.out.println("a :- "+a);
+        System.out.println("a :- "+In1.a);
         System.out.println("b :- "+b);
         System.out.println("c :- "+c);
     }

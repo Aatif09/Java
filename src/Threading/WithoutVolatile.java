@@ -6,7 +6,7 @@ public class WithoutVolatile {
         t.start();
 
         Thread.sleep(1000); // Let thread run for 1 sec
-        System.out.println("Main: requesting stop");
+        System.out.println("Practice.Main: requesting stop");
         t.stopTask();
     }
 }

@@ -29,7 +29,7 @@ public class Main {
         }
     }
 
-    // Main method
+    // Practice.Main method
     public static void main(String[] args) {
         // Using default constructor
         Student s1 = new Student();

@@ -14,7 +14,7 @@ class AA{
         }
 public class Prac {
     public static void main(String[] args) {
-        System.out.println("Printing from Main Method");
+        System.out.println("Printing from Practice.Main Method");
         System.out.println(AA.z);
         AA a1=new AA();
         a1.f1();

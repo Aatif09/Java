@@ -34,21 +34,21 @@ public class ThreadOperationsExample {
 
         // Wait for t1 to finish before main continues
         try {
-            t1.join();  // Main thread waits until t1 completes
+            t1.join();  // Practice.Main thread waits until t1 completes
         } catch (InterruptedException e) {
-            System.out.println("Main thread interrupted.");
+            System.out.println("Practice.Main thread interrupted.");
         }
 
-        System.out.println(t1.getName() + " has finished. Main thread continues.");
+        System.out.println(t1.getName() + " has finished. Practice.Main thread continues.");
 
         // Wait for t2 to finish too (optional)
         try {
             t2.join();
         } catch (InterruptedException e) {
-            System.out.println("Main thread interrupted.");
+            System.out.println("Practice.Main thread interrupted.");
         }
 
-        System.out.println("Main thread ends.");
+        System.out.println("Practice.Main thread ends.");
     }
 }
 

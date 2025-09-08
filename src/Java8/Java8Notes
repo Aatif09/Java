@@ -1,6 +1,6 @@
 /*
 import java.io.FileOutputStream;
-public class Main
+public class Practice.Main
 {
 	public static void main(String args[]){
 	        // Using try-with-resources
@@ -24,7 +24,7 @@ public class Main
 /*
 import java.util.*;
 
-public class Main {
+public class Practice.Main {
     public static void main(String[] args) {
         Map<String, List<Integer>> map = new HashMap<>();
         map.put("scores", List.of(90, 85, 100));
@@ -37,7 +37,7 @@ public class Main {
 //declaration using LVTI  Local Variable Type Inference in JAVA 10
 /*
 import java.util.ArrayList;
-class Main {
+class Practice.Main {
 
 	public static void main(String ap[])
 	{
@@ -52,7 +52,7 @@ class Main {
 
 /*
 import java.util.*;
-public class Main
+public class Practice.Main
 	{
 			public static void main(String args[])
 			{
@@ -74,7 +74,7 @@ public class Main
 	}
 */
 /*
-public class Main
+public class Practice.Main
 {
 	public static void main(String args[]){
 	    String day ="Abhishek";
@@ -97,7 +97,7 @@ Used to return a value from a switch expression block
 It replaces return inside switch expressions
  */
 /*
-public class Main
+public class Practice.Main
 {
 	static final int ONE = 1;
 	private static final int TWO = 2;
@@ -128,7 +128,7 @@ JSON
 SQL
 Multi-line messages*/
 /*
-public class Main
+public class Practice.Main
 {
 
 	public static void main(String a[])
@@ -156,7 +156,7 @@ public class Main
 /*
 record EmpRecord(int id, String name, int sal, String add){}
 
-public class Main {
+public class Practice.Main {
 
 	public static void main(String[] args) {
 
@@ -221,7 +221,7 @@ final class Anjali extends Human
 	}
 }
 
-public class Main
+public class Practice.Main
 {
 	public static void main(String[] args)
 	{
@@ -254,7 +254,7 @@ interface Vehicle {
     void start();
 }
 
-public class Main implements Vehicle {
+public class Practice.Main implements Vehicle {
     @Override
     public void start() {
         System.out.println("Car starts");
@@ -266,7 +266,7 @@ public class Main implements Vehicle {
 
     public static void main(String a[])
     {
-        System.out.println("in Main");
+        System.out.println("in Practice.Main");
     }
 }
 */
@@ -299,10 +299,10 @@ import java.lang.annotation.RetentionPolicy;
 @Game(name = "Hockey",   day = "Friday")
 @Game(name = "Football", day = "Saturday")
 
-public class Main {
+public class Practice.Main {
  public static void main(String[] args) {
      // Getting annotation by type into an array
-     Game[] game = Main.class.getAnnotationsByType(Game.class);
+     Game[] game = Practice.Main.class.getAnnotationsByType(Game.class);
      for (Game game2 : game) {    // Iterating values
          System.out.println(game2.name()+" on "+game2.day());
 }
